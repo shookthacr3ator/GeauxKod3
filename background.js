@@ -26,7 +26,7 @@ var toggleTabStatus = function(id){
         tabStatus[id] = {};
     };
 
-chrome.tabs.onUpdated.addListener(function(tabId, info, tab){
+chrome.tabs.onUpdated.addListener(function(tabId, info){
     if (info.status === 'complete') {
         initTabStatus(tabId);
     }
